@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scientific Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="calculator">
+
+        <div class="top">
+            <h2>Scientific Calculator</h2>
+            <button id="theme">🌙</button>
+        </div>
+
+        <input type="text" id="display" readonly>
+
+        <div class="buttons">
+
+            <button class="danger" onclick="clearDisplay()">C</button>
+            <button onclick="backspace()">⌫</button>
+            <button onclick="calculate('sqrt')">√</button>
+            <button onclick="calculate('square')">x²</button>
+
+            <button onclick="add('7')">7</button>
+            <button onclick="add('8')">8</button>
+            <button onclick="add('9')">9</button>
+            <button class="operator" onclick="add('/')">÷</button>
+
+            <button onclick="add('4')">4</button>
+            <button onclick="add('5')">5</button>
+            <button onclick="add('6')">6</button>
+            <button class="operator" onclick="add('*')">×</button>
+
+            <button onclick="add('1')">1</button>
+            <button onclick="add('2')">2</button>
+            <button onclick="add('3')">3</button>
+            <button class="operator" onclick="add('-')">−</button>
+
+            <button onclick="add('0')">0</button>
+            <button onclick="add('.')">.</button>
+            <button onclick="calculate('sin')">sin</button>
+            <button class="operator" onclick="add('+')">+</button>
+
+            <button onclick="calculate('cos')">cos</button>
+            <button onclick="calculate('tan')">tan</button>
+            <button onclick="calculate('log')">log</button>
+            <button onclick="calculate('ln')">ln</button>
+
+            <button onclick="calculate('power')">xʸ</button>
+            <button onclick="calculate('factorial')">n!</button>
+            <button onclick="calculate('pi')">π</button>
+            <button class="equal" onclick="calculate('equal')">=</button>
+
+        </div>
+
+    </div>
+
+    <div class="history">
+
+        <div class="history-top">
+            <h3>Calculation History</h3>
+            <button onclick="clearHistory()">Clear</button>
+        </div>
+
+        <div id="historyList">
+            <p>No calculations yet.</p>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
